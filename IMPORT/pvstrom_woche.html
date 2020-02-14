@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="jquery/themes/ui-lightness/jquery-ui.css" />
+<script src="jquery/jquery-1.9.1.js"></script>
+<script src="jquery/js/jquery-ui-1.10.3.custom.js"></script>
+<script src="jquery/timepicker/jquery-ui-timepicker-addon.js"></script>
+<script src="functions/js/jquery.datepicker-de.js"></script>
+<script src="functions/js/pvstrom_woche.js"></script>
+    
+<!-- 1/3. Include the RGraph libraries -->
+<script src="/RGraph/libraries/RGraph.common.core.js" ></script>
+<script src="/RGraph/libraries/RGraph.common.dynamic.js" ></script>
+<script type="text/javascript" src="RGraph/libraries/RGraph.common.effects.js" ></script>
+<script type="text/javascript" src="RGraph/libraries/RGraph.drawing.text.js" ></script>
+<script src="/RGraph/libraries/RGraph.bar.js" ></script>
+<script src="/RGraph/libraries/RGraph.common.tooltips.js" ></script>
+<!--[if lt IE 9]><script src="/RGraph/libraries/combined.html/excanvas.js"></script><![endif]-->
+
+ 
+<head>                                     
+ <title>Stromeinspreisung - Abfrage</title>                       
+ <meta name="keywords" content="Stromeinspeisung - Abfrage" />                                         
+ <meta name="description" content="Stromeinspeisung - Abfrage" />                                         
+ <meta name="googlebot" content="NOODP">                       
+</head>                        
+
+<body>             
+ <table border="1" width="100%">
+   <h2>Stromeinspeisung - Wochen - Abfrage</h2>          
+  </table>                    
+                          
+    <p></p>
+     
+    <form name="form1" align="left" method="POST" action="">
+      <label for="startzeitpunkt">Start Woche:</label> <input type="text" id="startzeitpunkt" name="startzeitpunkt"/>
+      <label for="endezeitpunkt">Ende Woche:</label> <input type="text" id="endezeitpunkt" name="endezeitpunkt"/>
+      <input type="button" value="Weiter" onClick="processing(form1)" />
+      <input type="submit" value="Löschen" onClick="" />
+    </form> 
+    
+    <canvas id="canvasBar" width=1300 height="550">
+        Ihr Browser unterstützt kein HTML5...                      
+    </canvas> 
+             
+   <h2>
+      <span id="average"></span>
+   </h2>
+   
+    <table border="1" width="100%">                                            
+      <tr>                                  
+        <td align="left">                                          
+          <a href="STROM.html">Zur&uumlck zur &Uumlbersicht</a>  </td>                          
+      </tr>                 
+    </table>           
+  </body>
+</html>                           
